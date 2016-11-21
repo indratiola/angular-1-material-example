@@ -1,0 +1,32 @@
+<md-content layout-padding>
+  <form name="profileForm" method="post" novalidate>
+    <md-input-container class="md-block">
+      <label>First name</label>
+      <input type="text" ng-model="user.fname" name="fname" required>
+      <div ng-messages="profileForm.fname.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Last name</label>
+      <input type="text" ng-model="user.lname" name="lname" required>
+      <div ng-messages="profileForm.lname.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Email address</label>
+      <input type="email" ng-model="user.email" name="email" required>
+      <div ng-messages="profile.email.$error" role="alert">
+        <div ng-message-exp="['required','email']">Enter a valid email.</div>
+      </div>
+    </md-input-container>
+
+    <div layout="row" layout-align="center center">
+      <md-button type="submit" class="md-raised md-primary">Update</md-button>
+    </div>
+
+  </form>
+</md-content>

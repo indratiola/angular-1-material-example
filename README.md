@@ -1,6 +1,8 @@
 # Angular Material Demo App
 
-> This SPA was initially developed for [cordova](http://ngcordova.com/) platform
+> WIP
+
+> This SPA is intended to use in [cordova](http://ngcordova.com/) platform
 
 ### Prerequisites
 * node js ^6.9.1
@@ -26,6 +28,9 @@ gulp serve
 * https://material.angularjs.org/latest/
 * Install Node.js on [Ubuntu/Mac OS](https://github.com/creationix/nvm), [Windows](https://nodejs.org/en/download/)
 
+### TODO
+* Integrate ui-router, define routes
+* Integrate templates
 
 #### License
 MIT [License](LICENSE.txt)

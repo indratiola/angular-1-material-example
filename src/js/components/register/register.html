@@ -1,0 +1,48 @@
+<md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
+
+<md-content flex layout-padding>
+  <form name="signupForm" method="post" novalidate>
+    <md-input-container class="md-block">
+      <label>First name</label>
+      <md-icon>person</md-icon>
+      <input type="text" ng-model="user.fname" name="fname" required>
+      <div ng-messages="signupForm.fname.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Last name</label>
+      <md-icon>person</md-icon>
+      <input type="text" ng-model="user.lname" name="lname" required>
+      <div ng-messages="signupForm.lname.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Email address</label>
+      <md-icon>email</md-icon>
+      <input type="email" ng-model="user.email" name="email" required>
+      <div ng-messages="profile.email.$error" role="alert">
+        <div ng-message-exp="['required','email']">Enter a valid email.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Password</label>
+      <md-icon>https</md-icon>
+      <input type="password" ng-model="user.password" name="password" required>
+      <div ng-messages="signupForm.password.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <div layout="column" layout-align="center center">
+      <md-button type="submit" class="md-raised md-primary">Register</md-button>
+      <md-button class="md-accent" ng-href="/login" target="_blank">Already have an account ?</md-button>
+    </div>
+
+  </form>
+
+</md-content>
