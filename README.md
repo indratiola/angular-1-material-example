@@ -21,6 +21,9 @@ npm install
 gulp serve
 ```
 
+### Read
+* https://stories.uplabs.com/getting-started-with-angular-material-3ee3cdb8ecd8#.pvzsmts38
+
 ### Resources
 * [gulp](http://gulpjs.com)
 * [BrowserSync](http://www.browsersync.io)
@@ -29,8 +32,8 @@ gulp serve
 * Install Node.js on [Ubuntu/Mac OS](https://github.com/creationix/nvm), [Windows](https://nodejs.org/en/download/)
 
 ### TODO
-* Integrate ui-router, define routes
-* Integrate templates
+* Use more moduler approach in components
+* Highlight sidenav items, [see](https://github.com/angular/material/issues/3420)
 
 #### License
 MIT [License](LICENSE.txt)

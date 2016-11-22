@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function productsController($mdSidenav) {
+  function purchasesController($mdSidenav) {
     var vm = this;
 
     this.$onInit = function () {
@@ -14,9 +14,9 @@
   }
 
 
-  angular.module('myApp').component('products', {
-    templateUrl: 'js/components/products/products.html',
-    controller: productsController
+  angular.module('myApp').component('purchases', {
+    templateUrl: 'js/components/purchases/purchases.html',
+    controller: purchasesController
   });
 
 })();

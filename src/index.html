@@ -29,16 +29,30 @@
   <script type="text/javascript" src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 
 </head>
-<body>
+<body layout="row" data-ng-app="myApp" data-ng-jq="" class="ng-cloak">
 
-<main data-ng-app="myApp" data-ng-jq="" class="ng-cloak">
+<!-- place for left sidebar -->
+<sidenav-left></sidenav-left>
 
+<!-- place for ui-router -->
+<ui-view layout="column" class="relative" layout-fill role="main"></ui-view>
 
-</main>
+<script src="js/_app.js"></script>
+<script src="js/app.config.js"></script>
+<script src="js/app.routes.js"></script>
+<script src="js/app.run.js"></script>
 
-<script type="text/javascript" src="js/_app.js"></script>
-<script type="text/javascript" src="js/app.config.js"></script>
-<!--<script type="text/javascript" src="js/app.routes.js"></script>
-<script type="text/javascript" src="js/app.run.js"></script>-->
+<script src="js/components/sidenav-left/sidenav-left.component.js"></script>
+<script src="js/components/login/login.component.js"></script>
+<script src="js/components/register/register.component.js"></script>
+<script src="js/components/products/products.component.js"></script>
+<script src="js/components/cart/cart.component.js"></script>
+<script src="js/components/purchases/purchases.component.js"></script>
+<script src="js/components/profile/profile.component.js"></script>
+
+<script src="js/directives/go-back.directive.js"></script>
+
+<script src="js/services/auth.service.js"></script>
+<script src="js/services/storage.servcie.js"></script>
 </body>
 </html>

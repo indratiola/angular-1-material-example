@@ -33,6 +33,9 @@ angular.module('myApp')
       .primaryPalette('teal')
       .accentPalette('red');
 
+    $mdThemingProvider.theme('search', 'default')
+      .primaryPalette('grey');
+
 
     // Globally disables all ARIA warnings.
     $mdAriaProvider.disableWarnings();

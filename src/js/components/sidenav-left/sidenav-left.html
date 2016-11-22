@@ -1,0 +1,48 @@
+<md-sidenav layout="column" class="md-sidenav-left" md-component-id="sidenav-left" md-whiteframe="4"
+            md-is-locked-open="$mdMedia('gt-md')">
+
+  <md-toolbar layout="row" class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <md-icon>perm_identity</md-icon>
+      <h2 class="md-toolbar-tools">John Doe</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="$ctrl.closeSideNav()" hide-gt-md>
+        <md-icon>chevron_left</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('products')">
+      <div class="inset">
+        <md-icon>dashboard</md-icon>
+      </div>
+      <div class="inset">Products</div>
+    </md-list-item>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('purchases')">
+      <div class="inset">
+        <md-icon>schedule</md-icon>
+      </div>
+      <div class="inset">Purchase History</div>
+    </md-list-item>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('cart')">
+      <div class="inset">
+        <md-icon>shopping_cart</md-icon>
+      </div>
+      <div class="inset">Cart</div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('profile')">
+      <div class="inset">
+        <md-icon>settings</md-icon>
+      </div>
+      <div class="inset">Profile</div>
+    </md-list-item>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('login')">
+      <div class="inset">
+        <md-icon>power_settings_new</md-icon>
+      </div>
+      <div class="inset">Logout</div>
+    </md-list-item>
+  </md-list>
+</md-sidenav>

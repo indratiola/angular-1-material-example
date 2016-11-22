@@ -5,13 +5,13 @@
     var vm = this;
 
     this.$onInit = function () {
-      vm.message = 'test';
+      vm.user = {};
     }
   }
 
 
   angular.module('myApp').component('profile', {
-    templateUrl: 'views/home.html',
+    templateUrl: 'js/components/profile/profile.html',
     controller: profileController
   });
 

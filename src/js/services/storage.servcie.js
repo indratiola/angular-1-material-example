@@ -36,5 +36,5 @@
 
   }
 
-  angular.module('myAPP').factory('StorageService', StorageService);
+  angular.module('myApp').factory('StorageService', StorageService);
 })();

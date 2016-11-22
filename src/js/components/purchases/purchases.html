@@ -5,12 +5,12 @@
       <md-icon>menu</md-icon>
     </md-button>
     <h2>
-      <span class="md-title">Products</span>
+      <span class="md-title">Purchase History</span>
     </h2>
     <span flex></span>
-    <md-button class="md-icon-button" aria-label="Search" ng-click="$ctrl.showSearchBar=true">
-      <md-tooltip>Search</md-tooltip>
-      <md-icon>search</md-icon>
+    <md-button class="md-icon-button" aria-label="Search" ui-sref="products">
+      <md-tooltip>Home</md-tooltip>
+      <md-icon>home</md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
       <md-tooltip>Cart</md-tooltip>
@@ -19,33 +19,9 @@
   </div>
 </md-toolbar>
 
-<!-- top search bar -->
-<md-toolbar md-theme="search" class="md-hue-3 md-whiteframe-z1" ng-show="$ctrl.showSearchBar">
-  <div class="md-toolbar-tools">
-    <md-button class="md-icon-button" aria-label="Back" ng-click="$ctrl.showSearchBar=false">
-      <md-tooltip>Back</md-tooltip>
-      <md-icon>arrow_back</md-icon>
-    </md-button>
-    <md-input-container  md-no-float flex>
-      <input ng-model="search" class="top-search" placeholder="Search here">
-    </md-input-container>
-    <md-button class="md-icon-button" aria-label="Search">
-      <md-tooltip>Search</md-tooltip>
-      <md-icon>search</md-icon>
-    </md-button>
-    <md-button class="md-icon-button" aria-label="More">
-      <md-icon>more_vert</md-icon>
-    </md-button>
-  </div>
-</md-toolbar>
-
 <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
 
 <md-content flex>
-
-  <md-button class="md-fab md-fab-bottom-right md-accent md-hue-2" aria-label="Add">
-    <md-icon>add</md-icon>
-  </md-button>
 
   <section layout="column" layout-fill layout-padding>
 

@@ -11,7 +11,7 @@
 
 
   angular.module('myApp').component('login', {
-    templateUrl: 'views/home.html',
+    templateUrl: 'js/components/login/login.html',
     controller: loginController
   });
 
