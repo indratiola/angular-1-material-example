@@ -38,6 +38,16 @@
       </div>
     </md-input-container>
 
+    <md-input-container class="md-block">
+      <md-radio-group layout="row" layout-align="center center" ng-model="user.type" ng-required="true" name="type">
+        <md-radio-button value="1" class="md-primary" name="type"> I am a Customer</md-radio-button>
+        <md-radio-button value="2" name="type"> I am a Supplier</md-radio-button>
+      </md-radio-group>
+      <div ng-messages="signupForm.type.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
     <div layout="column" layout-align="center center">
       <md-button type="submit" class="md-raised md-primary">Register</md-button>
       <md-button class="md-accent" ui-sref="login">Already have an account ?</md-button>
