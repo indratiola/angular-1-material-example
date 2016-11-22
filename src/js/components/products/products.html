@@ -1,5 +1,6 @@
+
 <!-- The top toolbar -->
-<md-toolbar ng-hide="$ctrl.showSearchBar">
+<md-toolbar class="md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()" hide-gt-md>
       <md-icon>menu</md-icon>
@@ -26,7 +27,7 @@
       <md-tooltip>Back</md-tooltip>
       <md-icon>arrow_back</md-icon>
     </md-button>
-    <md-input-container  md-no-float flex>
+    <md-input-container md-no-float flex>
       <input ng-model="search" class="top-search" placeholder="Search here">
     </md-input-container>
     <md-button class="md-icon-button" aria-label="Search">
@@ -34,38 +35,57 @@
     </md-button>
   </div>
 </md-toolbar>
-
+<!--
 <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
+-->
 
-<md-content flex>
+<md-content class="grey-bg" flex>
 
   <md-button class="md-fab md-fab-bottom-right md-accent md-hue-2" aria-label="Add">
     <md-icon>add</md-icon>
   </md-button>
 
-  <section layout="column" layout-fill layout-padding>
+  <section layout-fill layout-padding>
 
-    <md-list>
-      <md-list-item class="md-3-line" md-ink-ripple>
-        <div class="md-list-item-text">
-          <h3>Product name</h3>
-          <h4>Phone: 457894445</h4>
-          <p>
-            Here is the brief description of this item
-          </p>
-        </div>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item class="md-3-line" md-ink-ripple>
-        <div class="md-list-item-text">
-          <h3>Product 2 name</h3>
-          <h4>Phone: 4578987645</h4>
-          <p>
-            Here is the brief description of this item
-          </p>
-        </div>
-      </md-list-item>
-    </md-list>
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36 in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+
 
   </section>
 </md-content>

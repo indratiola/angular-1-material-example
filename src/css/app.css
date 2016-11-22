@@ -1,7 +1,28 @@
 /**
-* This is a workaround
+*  workaround : input field in toolbar
 */
 .top-search {
   margin-top: 24px !important;
   margin-bottom: 0;
+}
+
+/**
+* workaround: ripple effect on md-card
+*/
+md-card[md-ink-ripple] {
+  position: relative;
+}
+
+/*
+* Set a background for media until it loads image
+*/
+.card-media {
+  background: #ccc;
+}
+
+/*
+* background color for card container
+*/
+.grey-bg {
+  background-color: #eee;
 }
