@@ -12,10 +12,25 @@
       <md-tooltip>Home</md-tooltip>
       <md-icon>home</md-icon>
     </md-button>
-    <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
-      <md-tooltip>Cart</md-tooltip>
-      <md-icon>shopping_cart</md-icon>
-    </md-button>
+    <md-menu>
+      <md-button class="md-icon-button" ng-click="$ctrl.openMenu($mdOpenMenu, $event)" aria-label="More">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button>
+            <md-icon>sort_by_alpha</md-icon>
+            A-Z
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button>
+            <md-icon>reorder</md-icon>
+            Re-order
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
   </div>
 </md-toolbar>
 
@@ -29,7 +44,7 @@
       <md-list-item class="md-3-line" md-ink-ripple>
         <div class="md-list-item-text">
           <h3>Product name</h3>
-          <h4>Phone: 457894445</h4>
+          <h4>SKU: 457894445</h4>
           <p>
             Here is the brief description of this item
           </p>
@@ -39,7 +54,7 @@
       <md-list-item class="md-3-line" md-ink-ripple>
         <div class="md-list-item-text">
           <h3>Product 2 name</h3>
-          <h4>Phone: 4578987645</h4>
+          <h4>SKU: 4578987645</h4>
           <p>
             Here is the brief description of this item
           </p>

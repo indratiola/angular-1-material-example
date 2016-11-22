@@ -10,7 +10,11 @@
 
     this.openSideNav = function () {
       $mdSidenav('sidenav-left').open();
-    }
+    };
+
+    this.openMenu = function ($mdOpenMenu, ev) {
+      $mdOpenMenu(ev);
+    };
   }
 
 

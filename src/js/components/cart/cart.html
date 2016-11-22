@@ -12,9 +12,25 @@
       <md-tooltip>Home</md-tooltip>
       <md-icon>home</md-icon>
     </md-button>
-    <md-button class="md-icon-button" aria-label="More">
-      <md-icon>more_vert</md-icon>
-    </md-button>
+    <md-menu>
+      <md-button class="md-icon-button" ng-click="$ctrl.openMenu($mdOpenMenu, $event)" aria-label="More">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button>
+            <md-icon>sort_by_alpha</md-icon>
+            A-Z
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button>
+            <md-icon>reorder</md-icon>
+            Re-order
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
   </div>
 </md-toolbar>
 
@@ -25,26 +41,36 @@
   <section layout="column" layout-fill layout-padding>
 
     <md-list>
-      <md-list-item class="md-3-line" md-ink-ripple>
-        <div class="md-list-item-text">
+      <md-list-item class="md-3-line">
+        <div class="md-list-item-text" layout="column">
           <h3>Product name</h3>
-          <h4>Phone: 457894445</h4>
+          <h4>SKU: 457894445</h4>
           <p>
             Here is the brief description of this item
           </p>
+          <md-button class="md-icon-button md-secondary" aria-label="Delete">
+            <md-icon>delete</md-icon>
+          </md-button>
         </div>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item class="md-3-line" md-ink-ripple>
+      <md-list-item class="md-3-line">
         <div class="md-list-item-text">
           <h3>Product 2 name</h3>
-          <h4>Phone: 4578987645</h4>
+          <h4>SKU: 4578987645</h4>
           <p>
             Here is the brief description of this item
           </p>
+          <md-button class="md-icon-button md-secondary" aria-label="Delete">
+            <md-icon>delete</md-icon>
+          </md-button>
         </div>
       </md-list-item>
     </md-list>
+
+    <div layout="column" layout-align="center center">
+      <md-button type="submit" class="md-raised md-primary">Checkout</md-button>
+    </div>
 
   </section>
 </md-content>
