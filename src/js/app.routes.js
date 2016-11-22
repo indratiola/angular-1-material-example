@@ -23,6 +23,11 @@ angular.module('myApp').config(function ($stateProvider) {
       component: 'cart'
     },
     {
+      name: 'payment',
+      url: '/payment',
+      component: 'payment'
+    },
+    {
       name: 'purchases',
       url: '/purchases',
       component: 'purchases'
