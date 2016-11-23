@@ -1,5 +1,5 @@
-<!-- The top toolbar -->
-<md-toolbar ng-hide="$ctrl.showSearchBar">
+
+<md-toolbar layout="row" ng-hide="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()" hide-gt-md>
       <md-icon>menu</md-icon>
@@ -34,11 +34,16 @@
   </div>
 </md-toolbar>
 
-<md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
+<div layout="row" flex>
 
-<md-content flex>
+  <sidenav-left></sidenav-left>
 
-  <section layout="column" layout-fill layout-padding>
+  <md-content layout="column" layout-fill flex>
+
+    <div layout="row" flex>
+      <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
+    </div>
+
 
     <md-list>
       <md-list-item class="md-3-line">
@@ -72,5 +77,5 @@
       <md-button type="submit" class="md-raised md-primary" ui-sref="payment">Checkout</md-button>
     </div>
 
-  </section>
-</md-content>
+  </md-content>
+</div>

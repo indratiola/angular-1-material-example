@@ -17,7 +17,6 @@
     };
 
     this.confirmDelete = function (ev) {
-      console.log('you clicked delete');
 
       var confirm = $mdDialog.confirm()
         .title('Are you sure to delete ?')
@@ -29,7 +28,7 @@
 
       $mdDialog.show(confirm).then(function () {
         //do something when yes
-        console.log('yes');
+
         $mdToast.show(
           $mdToast.simple()
             .textContent('Item was deleted')
@@ -37,7 +36,7 @@
             .hideDelay(5000)
         );
       }, function () {
-        console.log('no');
+
         //do something when no
       });
     };

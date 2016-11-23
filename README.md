@@ -34,8 +34,8 @@ gulp serve
 ### TODO
 * Use more moduler approach in components
 * Highlight sidenav items, [see](https://github.com/angular/material/issues/3420)
-* Sidenav full height
-* Sticky toolbar
+* Sticky toolbar when using ui-view
+
 
 
 #### License

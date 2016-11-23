@@ -2,12 +2,13 @@
 
 <md-content flex layout-padding>
   <form name="loginForm" method="post" novalidate>
+
     <md-input-container class="md-block">
-      <label>User name</label>
-      <md-icon>person</md-icon>
-      <input type="text" ng-model="user.name" name="name" required>
-      <div ng-messages="loginForm.name.$error" role="alert">
-        <div ng-message="required">This is required.</div>
+      <label>Email address</label>
+      <md-icon>email</md-icon>
+      <input type="email" ng-model="user.email" name="email" required>
+      <div ng-messages="loginForm.email.$error" role="alert">
+        <div ng-message-exp="['required','email']">Enter a valid email.</div>
       </div>
     </md-input-container>
 
@@ -23,8 +24,9 @@
     <div layout="column" layout-align="center center">
       <md-button type="submit" class="md-raised md-primary">Login</md-button>
       <md-button type="button" ui-sref="forget-password">Forget Password ?</md-button>
-      <md-button type="button" class="md-accent" ui-sref="register">Register for new account</md-button>
-      <md-button type="button" class="md-primary" ui-sref="products">Skip</md-button>
+      <md-button type="button" class="md-accent" ui-sref="register">Create new account</md-button>
+      <md-button type="button" class="md-primary" ui-sref="products">Skip to products</md-button>
     </div>
+
   </form>
 </md-content>

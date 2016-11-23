@@ -1,5 +1,5 @@
-<!-- The top toolbar -->
-<md-toolbar class="md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
+
+<md-toolbar layout="row" class="md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()" hide-gt-md>
       <md-icon>menu</md-icon>
@@ -19,8 +19,8 @@
   </div>
 </md-toolbar>
 
-<!-- top search bar -->
-<md-toolbar md-theme="search" class="md-hue-3 md-whiteframe-z1" ng-show="$ctrl.showSearchBar">
+
+<md-toolbar layout="row" md-theme="search" class="md-hue-3 md-whiteframe-z1" ng-show="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Back" ng-click="$ctrl.showSearchBar=false">
       <md-tooltip>Back</md-tooltip>
@@ -35,49 +35,54 @@
   </div>
 </md-toolbar>
 
-<md-content class="grey-bg" flex layout-fill>
+<div layout="row" flex>
 
-  <div layout="row" flex layout-align="center center" layout-padding>
-    <md-progress-circular class="md-primary md-hue-1" md-mode="indeterminate"></md-progress-circular>
-  </div>
+  <sidenav-left></sidenav-left>
 
-  <md-card md-ink-ripple>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Product name</span>
-        <span class="md-subhead">24in X 36in</span>
-        <span class="md-subhead">$350</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media"></div>
-      </md-card-title-media>
-    </md-card-title>
-  </md-card>
+  <md-content layout="column" class="grey-bg" flex>
 
-  <md-card md-ink-ripple>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Product name</span>
-        <span class="md-subhead">24in X 36in</span>
-        <span class="md-subhead">$350</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media"></div>
-      </md-card-title-media>
-    </md-card-title>
-  </md-card>
+    <div layout="row" flex layout-align="center center" layout-padding>
+      <md-progress-circular class="md-primary md-hue-1" md-mode="indeterminate"></md-progress-circular>
+    </div>
 
-  <md-card md-ink-ripple>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Product name</span>
-        <span class="md-subhead">24in X 36 in</span>
-        <span class="md-subhead">$350</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media"></div>
-      </md-card-title-media>
-    </md-card-title>
-  </md-card>
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
 
-</md-content>
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+
+    <md-card md-ink-ripple>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Product name</span>
+          <span class="md-subhead">24in X 36 in</span>
+          <span class="md-subhead">$350</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-sm card-media"></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+
+  </md-content>
+</div>
