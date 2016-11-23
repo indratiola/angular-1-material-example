@@ -44,5 +44,18 @@
       </div>
       <div class="inset">Logout</div>
     </md-list-item>
+    <!-- links for guest user -->
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('login')">
+      <div class="inset">
+        <md-icon>input</md-icon>
+      </div>
+      <div class="inset">Login</div>
+    </md-list-item>
+    <md-list-item md-ink-ripple ng-click="$ctrl.goTo('register')">
+      <div class="inset">
+        <md-icon>person_add</md-icon>
+      </div>
+      <div class="inset">Register</div>
+    </md-list-item>
   </md-list>
 </md-sidenav>
