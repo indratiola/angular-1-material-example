@@ -8,6 +8,11 @@ angular.module('myApp').config(function ($stateProvider) {
       component: 'login'
     },
     {
+      name: 'forget-password',
+      url: '/forget-password',
+      component: 'forgetPassword'
+    },
+    {
       name: 'register',
       url: '/register',
       component: 'register'

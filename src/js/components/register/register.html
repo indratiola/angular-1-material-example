@@ -24,7 +24,7 @@
       <label>Email address</label>
       <md-icon>email</md-icon>
       <input type="email" ng-model="user.email" name="email" required>
-      <div ng-messages="profile.email.$error" role="alert">
+      <div ng-messages="signupForm.email.$error" role="alert">
         <div ng-message-exp="['required','email']">Enter a valid email.</div>
       </div>
     </md-input-container>
