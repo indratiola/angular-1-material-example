@@ -1,12 +1,11 @@
-
 <md-toolbar layout="column" class="md-primary md-hue-2">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Back" ap-go-back>
       <md-tooltip>Back</md-tooltip>
       <md-icon>arrow_back</md-icon>
     </md-button>
-    <h2>
-      <span class="md-title">Profile</span>
+    <h2 class="md-title">
+      Profile
     </h2>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="More">
@@ -18,80 +17,80 @@
 
 <div layout="row" flex>
 
-<md-content layout="column" flex layout-padding>
-  <form name="profileForm" method="post" novalidate>
-    <md-input-container class="md-block">
-      <label>First name</label>
-      <input type="text" ng-model="user.fname" name="fname" required>
-      <div ng-messages="profileForm.fname.$error" role="alert">
-        <div ng-message="required">This is required.</div>
+  <md-content layout="column" flex layout-padding>
+    <form name="profileForm" method="post" novalidate>
+      <md-input-container class="md-block">
+        <label>First name</label>
+        <input type="text" ng-model="user.fname" name="fname" required>
+        <div ng-messages="profileForm.fname.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Last name</label>
+        <input type="text" ng-model="user.lname" name="lname" required>
+        <div ng-messages="profileForm.lname.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Email address</label>
+        <input type="email" ng-model="user.email" name="email" required>
+        <div ng-messages="profile.email.$error" role="alert">
+          <div ng-message-exp="['required','email']">Enter a valid email.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Phone number</label>
+        <input type="text" ng-model="user.phone" name="phone" required>
+        <div ng-messages="profileForm.phone.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <div layout="row" layout-align="center center">
+        <md-button type="submit" class="md-raised md-primary">Update Profile</md-button>
       </div>
-    </md-input-container>
 
-    <md-input-container class="md-block">
-      <label>Last name</label>
-      <input type="text" ng-model="user.lname" name="lname" required>
-      <div ng-messages="profileForm.lname.$error" role="alert">
-        <div ng-message="required">This is required.</div>
+    </form>
+
+    <md-divider></md-divider>
+
+    <h3 class="md-subhead">Change your password</h3>
+    <form name="passForm" method="post" novalidate>
+
+      <md-input-container class="md-block">
+        <label>Old Password</label>
+        <input type="password" ng-model="password.old" name="old" required>
+        <div ng-messages="passForm.old.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>New password</label>
+        <input type="password" ng-model="password.new" name="new" required>
+        <div ng-messages="passForm.new.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Retype new password</label>
+        <input type="password" ng-model="password.retype" name="retype" required>
+        <div ng-messages="passForm.retype.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <div layout="row" layout-align="center center">
+        <md-button type="submit" class="md-raised md-primary">Change Password</md-button>
       </div>
-    </md-input-container>
 
-    <md-input-container class="md-block">
-      <label>Email address</label>
-      <input type="email" ng-model="user.email" name="email" required>
-      <div ng-messages="profile.email.$error" role="alert">
-        <div ng-message-exp="['required','email']">Enter a valid email.</div>
-      </div>
-    </md-input-container>
-
-    <md-input-container class="md-block">
-      <label>Phone number</label>
-      <input type="text" ng-model="user.phone" name="phone" required>
-      <div ng-messages="profileForm.phone.$error" role="alert">
-        <div ng-message="required">This is required.</div>
-      </div>
-    </md-input-container>
-
-    <div layout="row" layout-align="center center">
-      <md-button type="submit" class="md-raised md-primary">Update Profile</md-button>
-    </div>
-
-  </form>
-
-  <md-divider></md-divider>
-
-  <h3 class="md-subhead">Change your password</h3>
-  <form name="passForm" method="post" novalidate>
-
-    <md-input-container class="md-block">
-      <label>Old Password</label>
-      <input type="password" ng-model="password.old" name="old" required>
-      <div ng-messages="passForm.old.$error" role="alert">
-        <div ng-message="required">This is required.</div>
-      </div>
-    </md-input-container>
-
-    <md-input-container class="md-block">
-      <label>New password</label>
-      <input type="password" ng-model="password.new" name="new" required>
-      <div ng-messages="passForm.new.$error" role="alert">
-        <div ng-message="required">This is required.</div>
-      </div>
-    </md-input-container>
-
-    <md-input-container class="md-block">
-      <label>Retype new password</label>
-      <input type="password" ng-model="password.retype" name="retype" required>
-      <div ng-messages="passForm.retype.$error" role="alert">
-        <div ng-message="required">This is required.</div>
-      </div>
-    </md-input-container>
-
-    <div layout="row" layout-align="center center">
-      <md-button type="submit" class="md-raised md-primary">Change Password</md-button>
-    </div>
-
-  </form>
-</md-content>
+    </form>
+  </md-content>
 
 </div>
