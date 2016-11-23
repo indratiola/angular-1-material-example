@@ -1,32 +1,38 @@
 <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
 
-<md-content flex layout-padding>
-  <form name="loginForm" method="post" novalidate>
+<md-content class="ap-bg-grey" flex layout-padding>
+  <md-card layout-padding>
+    <form name="loginForm" method="post" novalidate>
 
-    <md-input-container class="md-block">
-      <label>Email address</label>
-      <md-icon>email</md-icon>
-      <input type="email" ng-model="user.email" name="email" required>
-      <div ng-messages="loginForm.email.$error" role="alert">
-        <div ng-message-exp="['required','email']">Enter a valid email.</div>
+      <md-input-container class="md-block">
+        <label>Email address</label>
+        <md-icon>email</md-icon>
+        <input type="email" ng-model="user.email" name="email" required>
+        <div ng-messages="loginForm.email.$error" role="alert">
+          <div ng-message-exp="['required','email']">Enter a valid email.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Password</label>
+        <md-icon>lock</md-icon>
+        <input type="password" ng-model="user.password" name="password" required>
+        <div ng-messages="loginForm.password.$error" role="alert">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <div layout="column" layout-align="center center">
+        <md-button type="submit" class="md-raised md-primary">Login</md-button>
+        <md-button type="button" ui-sref="forget-password">Forget Password ?</md-button>
+        <md-button type="button" class="md-accent" ui-sref="register">Create new account</md-button>
       </div>
-    </md-input-container>
 
-    <md-input-container class="md-block">
-      <label>Password</label>
-      <md-icon>lock</md-icon>
-      <input type="password" ng-model="user.password" name="password" required>
-      <div ng-messages="loginForm.password.$error" role="alert">
-        <div ng-message="required">This is required.</div>
-      </div>
-    </md-input-container>
+    </form>
+  </md-card>
 
-    <div layout="column" layout-align="center center">
-      <md-button type="submit" class="md-raised md-primary">Login</md-button>
-      <md-button type="button" ui-sref="forget-password">Forget Password ?</md-button>
-      <md-button type="button" class="md-accent" ui-sref="register">Create new account</md-button>
-      <md-button type="button" class="md-primary" ui-sref="products">Skip to products</md-button>
-    </div>
+  <div layout="column" layout-align="center center">
+    <md-button type="button" class="md-primary" ui-sref="products">Skip to products</md-button>
+  </div>
 
-  </form>
 </md-content>

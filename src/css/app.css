@@ -1,13 +1,15 @@
+/* Custom class names are prefixed with 'ap' */
+
 /**
-*  workaround : input field in toolbar
+*  Workaround : input field in toolbar
 */
-.top-search {
+.ap-toolbar-search {
   margin-top: 24px !important;
   margin-bottom: 0;
 }
 
 /**
-* workaround: ripple effect on md-card
+* Workaround: ripple effect on md-card
 */
 md-card[md-ink-ripple] {
   position: relative;
@@ -23,6 +25,6 @@ md-card[md-ink-ripple] {
 /*
 * background color for card container
 */
-.grey-bg {
+.ap-bg-grey {
   background-color: #eee;
 }
