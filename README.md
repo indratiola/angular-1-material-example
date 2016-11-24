@@ -31,7 +31,6 @@ npm start
 
 ### TODO
 * Use more moduler approach in components
-* Highlight sidenav items, [see](https://github.com/angular/material/issues/3420)
 * Sticky toolbar when using ui-view
 
 
