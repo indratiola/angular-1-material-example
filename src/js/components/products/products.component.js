@@ -6,11 +6,13 @@
 
     this.$onInit = function () {
       vm.showSearchBar = false;
+      vm.listLayout = true;
     };
 
     this.openSideNav = function () {
       $mdSidenav('sidenav-left').open();
-    }
+    };
+
   }
 
 

@@ -1,9 +1,9 @@
-angular.module('myApp').run(function ($rootScope, $location, $log) {
+angular.module('myApp').run(function ($rootScope, $state, $log) {
 
   /**
    * Always redirect user first page
    */
-  $location.path('/login');
+  $state.transitionTo('login');
 
   $log.debug('Debug: app run');
 

@@ -1,4 +1,4 @@
-<md-toolbar layout="row" class="md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
+<md-toolbar layout="row" class="animate-show md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()" hide-gt-md>
       <md-icon>menu</md-icon>
@@ -7,8 +7,11 @@
       Products
     </h2>
     <span flex></span>
+    <md-button class="md-icon-button" aria-label="Layout" ng-click="$ctrl.listLayout=!$ctrl.listLayout">
+      <md-icon ng-show="$ctrl.listLayout">view_module</md-icon>
+      <md-icon ng-show="!$ctrl.listLayout">view_list</md-icon>
+    </md-button>
     <md-button class="md-icon-button" aria-label="Search" ng-click="$ctrl.showSearchBar=true">
-      <md-tooltip>Search</md-tooltip>
       <md-icon>search</md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
@@ -22,7 +25,6 @@
 <md-toolbar layout="row" md-theme="search" class="md-hue-3 md-whiteframe-z1" ng-show="$ctrl.showSearchBar">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Back" ng-click="$ctrl.showSearchBar=false">
-      <md-tooltip>Back</md-tooltip>
       <md-icon>arrow_back</md-icon>
     </md-button>
     <md-input-container md-no-float flex>
@@ -39,6 +41,9 @@
   <sidenav-left></sidenav-left>
 
   <md-content layout="column" class="ap-bg-grey" flex>
+    <md-subheader class="md-accent">
+      Latest products
+    </md-subheader>
 
     <div layout="row" flex layout-align="center center" layout-padding>
       <md-progress-circular class="md-primary md-hue-1" md-mode="indeterminate"></md-progress-circular>
