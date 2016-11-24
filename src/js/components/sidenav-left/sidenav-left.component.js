@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function sidenavController($mdSidenav, $state) {
+  function sidenavController($mdSidenav) {
     var vm = this;
 
     this.$onInit = function () {
@@ -11,12 +11,6 @@
     this.closeSideNav = function () {
       $mdSidenav('sidenav-left').close();
     };
-
-    this.goTo = function (state) {
-      $mdSidenav('sidenav-left').close().then(function () {
-        $state.go(state);
-      });
-    }
   }
 
 
