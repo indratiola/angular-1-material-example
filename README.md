@@ -30,9 +30,9 @@ npm start
 * [BrowserSync](http://www.browsersync.io)
 
 ### TODO
-* Use more moduler approach in components
-* Sticky toolbar when using ui-view
-
+* Use more modular approach in components
+* Sticky toolbar when using ui-view, see [without](http://codepen.io/anon/pen/wKWrpy)
+* Use legacy controller and template based routing to resolve sticky issue ?
 
 
 #### License

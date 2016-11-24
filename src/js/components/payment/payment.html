@@ -10,48 +10,47 @@
   </div>
 </md-toolbar>
 
-<div layout="row" flex>
+<md-content layout="column" flex layout-padding>
 
-  <md-content layout="column" flex layout-padding>
-    <form name="payForm" method="post" novalidate>
-      <md-input-container class="md-block">
-        <label>Name on card</label>
-        <input type="text" ng-model="user.name" name="name" required>
-        <div ng-messages="payForm.name.$error" role="alert">
+  <form name="payForm" method="post" novalidate>
+    <md-input-container class="md-block">
+      <label>Name on card</label>
+      <input type="text" ng-model="user.name" name="name" required>
+      <div ng-messages="payForm.name.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Card number</label>
+      <input type="text" ng-model="user.card_number" name="card_number" required>
+      <div ng-messages="payForm.card_number.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <div layout="row">
+      <md-input-container flex="50">
+        <label>Expiry</label>
+        <input type="text" placeholder="MM/YY" ng-model="user.expiry" name="expiry" required>
+        <div ng-messages="payForm.expiry.$error" role="alert">
           <div ng-message="required">This is required.</div>
         </div>
       </md-input-container>
 
-      <md-input-container class="md-block">
-        <label>Card number</label>
-        <input type="text" ng-model="user.card_number" name="card_number" required>
-        <div ng-messages="payForm.card_number.$error" role="alert">
+      <md-input-container flex="50">
+        <label>CVC</label>
+        <input type="text" ng-model="user.cvc" name="cvc" required>
+        <div ng-messages="payForm.cvc.$error" role="alert">
           <div ng-message="required">This is required.</div>
         </div>
       </md-input-container>
+    </div>
 
-      <div layout="row">
-        <md-input-container flex="50">
-          <label>Expiry</label>
-          <input type="text" placeholder="MM/YY" ng-model="user.expiry" name="expiry" required>
-          <div ng-messages="payForm.expiry.$error" role="alert">
-            <div ng-message="required">This is required.</div>
-          </div>
-        </md-input-container>
+    <div layout="row" layout-align="center center">
+      <md-button type="submit" class="md-raised md-primary">Pay - $350.00</md-button>
+    </div>
 
-        <md-input-container flex="50">
-          <label>CVC</label>
-          <input type="text" ng-model="user.cvc" name="cvc" required>
-          <div ng-messages="payForm.cvc.$error" role="alert">
-            <div ng-message="required">This is required.</div>
-          </div>
-        </md-input-container>
-      </div>
+  </form>
+</md-content>
 
-      <div layout="row" layout-align="center center">
-        <md-button type="submit" class="md-raised md-primary">Pay - $350.00</md-button>
-      </div>
-
-    </form>
-  </md-content>
-</div>
