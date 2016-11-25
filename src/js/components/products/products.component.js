@@ -14,7 +14,17 @@
     };
 
     this.showFilter = function ($event) {
-      //todo show filter dialog
+      $mdDialog.show({
+        parent: angular.element(document.body),
+        template: '<products-filter></products-filter>',
+        targetEvent: $event,
+        clickOutsideToClose: true,
+        escapeToClose: false,
+        disableParentScroll: true,
+        autoWrap: true
+      }).then(function (form) {
+
+      });
     };
 
   }

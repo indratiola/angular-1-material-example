@@ -1,0 +1,67 @@
+<!-- don't wrap with md-dialog element
+https://github.com/angular/material/issues/8409
+-->
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <h2>Filters</h2>
+    <span flex></span>
+    <md-button class="md-icon-button" ng-click="$ctrl.hide()">
+      <md-icon aria-label="Close dialog">close</md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-dialog-content layout-padding flex>
+  <form novalidate>
+
+    <md-input-container class="md-block">
+      <md-switch ng-model="$ctrl.form.fav" aria-label="Favorite">
+        Show favorite only
+      </md-switch>
+    </md-input-container>
+
+    <div layout>
+      <div flex="20" layout layout-align="center center">
+        <span class="md-body-1">Rating</span>
+      </div>
+      <md-slider flex md-discrete class="md-accent" ng-model="$ctrl.form.rating" step="1" min="1" max="5"
+                 aria-label="rating"></md-slider>
+    </div>
+
+    <md-input-container class="md-block">
+      <md-checkbox> Item 1</md-checkbox>
+      <md-checkbox> Item 2</md-checkbox>
+      <md-checkbox> Item 3</md-checkbox>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Color</label>
+      <md-select ng-model="$ctrl.form.color">
+        <md-option><em>None</em></md-option>
+        <md-option ng-value="1"> Red</md-option>
+        <md-option ng-value="2"> Green</md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container>
+      <md-radio-group layout="row" layout-align="center center" ng-model="$ctrl.form.type" name="type">
+        <md-radio-button value="10"> 10 mm</md-radio-button>
+        <md-radio-button value="15"> 15 mm</md-radio-button>
+        <md-radio-button value="20"> 20 mm</md-radio-button>
+      </md-radio-group>
+    </md-input-container>
+  </form>
+</md-dialog-content>
+
+<md-divider></md-divider>
+
+<md-dialog-actions layout="row">
+  <span flex></span>
+  <md-button class="md-warn" ng-click="$ctrl.cancel()">
+    Cancel
+  </md-button>
+  <md-button class="md-primary" ng-click="$ctrl.apply($ctrl.form)">
+    Apply
+  </md-button>
+</md-dialog-actions>
+
