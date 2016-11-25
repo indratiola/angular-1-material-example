@@ -20,27 +20,27 @@ angular.module('myApp').config(function ($stateProvider) {
     {
       name: 'products',
       url: '/products',
-      component: 'products'
+      template: '<products layout="column"></products>'
     },
     {
       name: 'cart',
       url: '/cart',
-      component: 'cart'
+      template: '<cart layout="column"></cart>'
     },
     {
       name: 'payment',
       url: '/payment',
-      component: 'payment'
+      template: '<payment layout="column"></payment>'
     },
     {
       name: 'purchases',
       url: '/purchases',
-      component: 'purchases'
+      template: '<purchases layout="column"></purchases>'
     },
     {
       name: 'profile',
       url: '/profile',
-      component: 'profile'
+      template: '<profile layout="column"></profile>'
     }
   ];
 

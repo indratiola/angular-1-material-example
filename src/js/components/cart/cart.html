@@ -42,31 +42,21 @@
   </div>
 
   <md-list>
-    <md-list-item class="md-3-line">
-      <div class="md-list-item-text" layout="column">
-        <h3>Product name</h3>
-        <h4>SKU: 457894445</h4>
-        <p>
-          Here is the brief description of this item
-        </p>
+    <div ng-repeat="n in [1,2,3]">
+      <md-list-item class="md-3-line">
+        <div class="md-list-item-text" layout="column">
+          <h3>Product {{n}} name</h3>
+          <h4>SKU: 457894445</h4>
+          <p>
+            Here is the brief description of this item
+          </p>
+        </div>
         <md-button class="md-icon-button md-secondary" ng-click="$ctrl.confirmDelete($event)" aria-label="Delete">
           <md-icon>delete</md-icon>
         </md-button>
-      </div>
-    </md-list-item>
-    <md-divider></md-divider>
-    <md-list-item class="md-3-line">
-      <div class="md-list-item-text">
-        <h3>Product 2 name</h3>
-        <h4>SKU: 4578987645</h4>
-        <p>
-          Here is the brief description of this item
-        </p>
-        <md-button class="md-icon-button md-secondary" ng-click="$ctrl.confirmDelete($event)" aria-label="Delete">
-          <md-icon>delete</md-icon>
-        </md-button>
-      </div>
-    </md-list-item>
+      </md-list-item>
+      <md-divider ng-hide="$last"></md-divider>
+    </div>
   </md-list>
 
   <div layout="column" layout-align="center center">

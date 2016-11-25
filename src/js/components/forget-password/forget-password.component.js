@@ -1,11 +1,15 @@
 (function () {
   'use strict';
 
-  function passwordController() {
+  function passwordController($log) {
     var vm = this;
 
     this.$onInit = function () {
-      vm.form = {};
+      vm.user = {};
+    };
+
+    this.doRequest = function (user) {
+      $log.debug(user);
     }
   }
 

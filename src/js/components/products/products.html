@@ -39,13 +39,21 @@
 
 <md-content class="ap-bg-grey" flex>
   <md-subheader class="md-accent">
-    Latest products
+    <span ng-show="!$ctrl.showSearchBar">Latest products</span>
+    <span ng-show="$ctrl.showSearchBar">Search results</span>
   </md-subheader>
 
-  <div layout="row" flex layout-align="center center" layout-padding>
+  <div layout="column" flex layout-align="center center" layout-padding>
     <md-progress-circular class="md-primary md-hue-1" md-mode="indeterminate"></md-progress-circular>
+    <div layout-padding>
+      Loading ...
+    </div>
   </div>
 
+  <!--
+  todo implement md-virtual-repeat
+  @link https://github.com/angular/material/issues/4314
+  -->
   <md-card ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]">
     <md-card-title>
       <md-card-title-text>
@@ -58,14 +66,19 @@
       </md-card-title-media>
     </md-card-title>
     <md-divider></md-divider>
-    <md-card-actions layout="row" layout-align="end center">
+    <md-card-actions layout="row" flex>
       <md-button>View Product</md-button>
-      <md-button class="md-icon-button">
-        <md-icon>favorite_border</md-icon>
-      </md-button>
-      <md-button class="md-icon-button">
-        <md-icon>add_shopping_cart</md-icon>
-      </md-button>
+      <span flex></span>
+      <div layout-align="end center">
+        <md-button class="md-icon-button">
+          <md-icon ng-show="!$first">favorite_border</md-icon>
+          <md-icon ng-show="$first" md-colors="{color:'accent'}">favorite</md-icon>
+        </md-button>
+        <md-button class="md-icon-button">
+          <md-icon ng-show="!$first">add_shopping_cart</md-icon>
+          <md-icon ng-show="$first" md-colors="{color:'accent'}">remove_shopping_cart</md-icon>
+        </md-button>
+      </div>
     </md-card-actions>
   </md-card>
 

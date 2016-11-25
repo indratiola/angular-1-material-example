@@ -1,8 +1,6 @@
 # Angular Material Demo App
 
-> WIP
-
-> This SPA is intended to use in [cordova](http://ngcordova.com/) platform
+> This SPA is intended to use in [cordova](http://ngcordova.com/) platform but you can try it in your browser as well
 
 ### Prerequisites
 * node js ^6.9.1
@@ -20,9 +18,6 @@ npm install
 npm start
 ```
 
-### Read
-* https://stories.uplabs.com/getting-started-with-angular-material-3ee3cdb8ecd8#.pvzsmts38
-
 ### Resources
 * https://material.io/icons/
 * https://material.angularjs.org/latest/
@@ -30,9 +25,10 @@ npm start
 * [BrowserSync](http://www.browsersync.io)
 
 ### TODO
-* Use more modular approach in components
-* Sticky toolbar when using ui-view, see [without](http://codepen.io/anon/pen/wKWrpy)
-* Use legacy controller and template based routing to resolve sticky issue ?
+* Fix layout on large screens
+* Product page two layouts
+* Product page filter dialog
+* Single product page 
 
 
 #### License

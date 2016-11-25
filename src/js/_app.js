@@ -10,7 +10,8 @@
       'ngMaterial'
     ]);
 
-
-  // todo Define Global App configs
+  app.constant('WEB_SERVICE', {
+    url: 'http://localhost:9000/api/v1/'
+  });
 
 })();

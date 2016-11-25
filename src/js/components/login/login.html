@@ -3,12 +3,12 @@
 <md-content class="ap-bg-grey" flex layout-padding>
   <md-card layout-padding>
     <h3 class="md-title" md-colors="{color:'accent'}">Sign-in</h3>
-    <form name="loginForm" method="post" novalidate>
+    <form name="loginForm" method="post" novalidate ng-submit="$ctrl.doLogin($ctrl.user)">
 
       <md-input-container class="md-block">
         <label>Email address</label>
         <md-icon>email</md-icon>
-        <input type="email" ng-model="user.email" name="email" required>
+        <input type="email" ng-model="$ctrl.user.email" name="email" required>
         <div ng-messages="loginForm.email.$error" role="alert">
           <div ng-message-exp="['required','email']">Enter a valid email.</div>
         </div>
@@ -17,14 +17,14 @@
       <md-input-container class="md-block">
         <label>Password</label>
         <md-icon>lock</md-icon>
-        <input type="password" ng-model="user.password" name="password" required>
+        <input type="password" ng-model="$ctrl.user.password" name="password" required>
         <div ng-messages="loginForm.password.$error" role="alert">
           <div ng-message="required">This is required.</div>
         </div>
       </md-input-container>
 
       <div layout="column" layout-align="center center">
-        <md-button type="submit" class="md-raised md-primary">Login</md-button>
+        <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
         <md-button type="button" ui-sref="forget-password">Forget Password ?</md-button>
         <md-button type="button" class="md-accent" ui-sref="register">Create new account</md-button>
       </div>

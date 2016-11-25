@@ -14,7 +14,7 @@ angular.module('myApp')
     $logProvider.debugEnabled(true);
 
 
-    //Tell server that request is ajax
+    // Tell server that request is ajax
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     /**
@@ -27,7 +27,7 @@ angular.module('myApp')
     $locationProvider.hashPrefix('!');
 
     /**
-     * https://material.angularjs.org/latest/Theming/03_configuring_a_theme
+     * @link https://material.angularjs.org/latest/Theming/03_configuring_a_theme
      */
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')

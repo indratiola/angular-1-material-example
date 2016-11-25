@@ -1,12 +1,16 @@
 (function () {
   'use strict';
 
-  function paymentController() {
+  function paymentController($log) {
     var vm = this;
 
     this.$onInit = function () {
-      vm.user = {};
-    }
+      vm.form = {};
+    };
+
+    this.doPayment = function (form) {
+      $log.debug(form);
+    };
   }
 
 

@@ -1,11 +1,15 @@
 (function () {
   'use strict';
 
-  function registerController() {
+  function registerController($log) {
     var vm = this;
 
     this.$onInit = function () {
-      vm.user = {};
+      vm.user = {type: 1};
+    };
+
+    this.doRegister = function (user) {
+      $log.debug(user);
     }
   }
 

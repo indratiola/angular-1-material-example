@@ -3,6 +3,7 @@
 
   /**
    * LocalStorage service
+   * @link https://developer.mozilla.org/en/docs/Web/API/Window/localStorage
    * @param $window
    * @returns {{set: set, get: get, remove: remove, clearAll: clearAll}}
    * @constructor
