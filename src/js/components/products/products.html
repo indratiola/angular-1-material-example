@@ -1,4 +1,6 @@
-<md-toolbar layout="row" class="animate-show md-whiteframe-1dp" ng-hide="$ctrl.showSearchBar">
+<md-toolbar layout="column" md-scroll-shrink class="md-medium-tall animate-show md-whiteframe-1dp"
+            ng-hide="$ctrl.showSearchBar">
+
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()" hide-gt-md>
       <md-icon>menu</md-icon>
@@ -7,10 +9,6 @@
       Products
     </h2>
     <span flex></span>
-    <md-button class="md-icon-button" aria-label="Layout" ng-click="$ctrl.listLayout=!$ctrl.listLayout">
-      <md-icon ng-show="$ctrl.listLayout">view_module</md-icon>
-      <md-icon ng-show="!$ctrl.listLayout">view_list</md-icon>
-    </md-button>
     <md-button class="md-icon-button" aria-label="Search" ng-click="$ctrl.showSearchBar=true">
       <md-icon>search</md-icon>
     </md-button>
@@ -19,6 +17,18 @@
       <md-icon>shopping_cart</md-icon>
     </md-button>
   </div>
+
+  <section layout="row" flex layout-align="end center">
+    <md-button class="md-icon-button" aria-label="Layout">
+      <md-icon>view_module</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" ng-disabled="true" aria-label="Layout">
+      <md-icon>view_list</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="Filter">
+      <md-icon>filter_list</md-icon>
+    </md-button>
+  </section>
 </md-toolbar>
 
 <md-toolbar layout="row" md-theme="search" class="md-hue-3 md-whiteframe-z1" ng-show="$ctrl.showSearchBar">
@@ -27,7 +37,7 @@
       <md-icon>arrow_back</md-icon>
     </md-button>
     <md-input-container md-no-float flex>
-      <input ng-model="search" class="ap-toolbar-search" placeholder="Search here">
+      <input ng-model="search" class="ap-toolbar-search" placeholder="Search ...">
     </md-input-container>
     <md-button class="md-icon-button" aria-label="Search">
       <md-icon>search</md-icon>

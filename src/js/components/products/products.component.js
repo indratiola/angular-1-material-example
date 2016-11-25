@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function productsController($mdSidenav) {
+  function productsController($mdSidenav, $mdDialog) {
     var vm = this;
 
     this.$onInit = function () {
@@ -11,6 +11,10 @@
 
     this.openSideNav = function () {
       $mdSidenav('sidenav-left').open();
+    };
+
+    this.showFilter = function ($event) {
+      //todo show filter dialog
     };
 
   }
