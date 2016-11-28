@@ -1,11 +1,11 @@
 <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
 
 <md-content class="ap-bg-grey" layout="column" layout-padding layout-align="center center">
-  <md-card layout-padding flex-gt-xs="60">
+  <md-card layout-padding flex-gt-xs="100">
 
     <div layout="column" flex layout-align="center center">
       <img src="img/logo.svg" height="100" alt="logo">
-      <p class="md-subhead">Signin to Angular Material App</p>
+      <p class="md-subhead">Sign-in to Angular Material App</p>
     </div>
 
     <form name="loginForm" method="post" novalidate ng-submit="$ctrl.doLogin($ctrl.user)">
@@ -34,17 +34,17 @@
         </md-button>
       </div>
 
-      <div layout="row">
-        <md-button type="button" class="md-accent" ui-sref="register">I am a new User ?</md-button>
-        <span flex></span>
-        <md-button type="button" ui-sref="forget-password">Forget password ?</md-button>
+      <div layout="row" layout-xs="column" layout-align="center center">
+        <md-button md-no-ink type="button" ui-sref="forget-password">Forget password ?</md-button>
+        <span flex hide-xs></span>
+        <md-button md-no-ink type="button" class="md-accent" ui-sref="register">New User ?</md-button>
       </div>
 
     </form>
   </md-card>
 
   <div layout="column" layout-align="center center">
-    <md-button type="button" class="md-primary" ui-sref="products">Skip to products</md-button>
+    <md-button md-no-ink type="button" class="md-primary" ui-sref="products">Skip to products</md-button>
   </div>
 
 </md-content>

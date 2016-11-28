@@ -1,0 +1,63 @@
+<md-toolbar layout="column" class="md-primary md-hue-2">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Back" ap-go-back>
+      <md-tooltip>Back</md-tooltip>
+      <md-icon>arrow_back</md-icon>
+    </md-button>
+    <h2 class="md-title">
+      Product Details
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="More">
+      <md-icon>more_vert</md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-content flex layout-padding class="ap-bg-grey" layout-align="center center">
+  <h3 class="md-headline">Product {{$ctrl.product.id}} name</h3>
+
+  <img class="card-media" height="200" width="98%" alt="product_image">
+
+  <section layout="row" layout-align="center center" layout-wrap>
+    <md-button class="md-raised">Add to cart</md-button>
+    <span flex></span>
+    <md-button class="md-raised md-primary">$600 Buy now</md-button>
+  </section>
+
+  <section layout="column">
+    <h3 class="md-body-3">Production description</h3>
+    <md-divider></md-divider>
+    <p>
+      The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words
+      in Ernest Greene's musical language: feel it. It's a simple request, as well...
+    </p>
+  </section>
+
+  <h3 class="md-body-3">Production specs</h3>
+  <md-card>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Technical">
+        <md-content class="md-padding" layout="column">
+          <md-list>
+            <md-list-item ng-repeat="n in [1,2,3,4]">
+              <p> Feature {{n}} name: </p>
+              <span class="md-secondary">Yes</span>
+            </md-list-item>
+          </md-list>
+        </md-content>
+      </md-tab>
+      <md-tab label="Benchmark">
+        <md-content class="md-padding" layout="column">
+          <md-list>
+            <md-list-item ng-repeat="n in [1,2,3,4]">
+              <p> Feature {{n}} name: </p>
+              <span class="md-secondary">Yes</span>
+            </md-list-item>
+          </md-list>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-card>
+
+</md-content>

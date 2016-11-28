@@ -23,6 +23,12 @@ angular.module('myApp').config(function ($stateProvider) {
       template: '<products layout="column"></products>'
     },
     {
+      name: 'product',
+      url: '/product/{id:int}',//interpreted as integer
+      template: '<product-detail layout="column"></product-detail>'
+      //todo use resolve to fetch product data
+    },
+    {
       name: 'cart',
       url: '/cart',
       template: '<cart layout="column"></cart>'

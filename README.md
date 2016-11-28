@@ -1,6 +1,6 @@
 # Angular Material Demo App
 
-> This SPA is intended to use in [cordova](http://ngcordova.com/) platform but you can try it in your browser as well
+> This SPA is intended to use in mobile platform like [cordova](http://ngcordova.com/) platform but you can try it in your browser as well
 
 ### Prerequisites
 * node js ^6.9.1
