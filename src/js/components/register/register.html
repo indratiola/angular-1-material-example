@@ -2,7 +2,11 @@
 
 <md-content class="ap-bg-grey" flex layout-padding>
   <md-card layout-padding>
-    <h3 class="md-title" md-colors="{color:'accent'}">Sign-up</h3>
+
+    <div layout="column" flex layout-align="center center">
+      <img src="img/logo.svg" height="100" alt="logo">
+      <p class="md-subhead">Create a new account</p>
+    </div>
 
     <form name="signupForm" method="post" novalidate ng-submit="$ctrl.doRegister($ctrl.user)">
       <md-input-container class="md-block">

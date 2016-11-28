@@ -2,7 +2,12 @@
 
 <md-content class="ap-bg-grey" flex layout-padding>
   <md-card layout-padding>
-    <h3 class="md-title" md-colors="{color:'accent'}">Sign-in</h3>
+
+    <div layout="column" flex layout-align="center center">
+      <img src="img/logo.svg" height="100" alt="logo">
+      <p class="md-subhead">Welcome to Angular Material App</p>
+    </div>
+
     <form name="loginForm" method="post" novalidate ng-submit="$ctrl.doLogin($ctrl.user)">
 
       <md-input-container class="md-block">
@@ -29,9 +34,9 @@
       </div>
 
       <div layout="row">
-        <md-button type="button" ui-sref="forget-password">Forget password ?</md-button>
+        <md-button type="button" class="md-accent" ui-sref="register">I am a new User ?</md-button>
         <span flex></span>
-        <md-button type="button" class="md-accent" ui-sref="register">New User ?</md-button>
+        <md-button type="button" ui-sref="forget-password">Forget password ?</md-button>
       </div>
 
     </form>
