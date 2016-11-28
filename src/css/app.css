@@ -8,23 +8,16 @@
   margin-bottom: 0;
 }
 
-/**
-* Workaround: ripple effect on md-card
-*/
-md-card[md-ink-ripple] {
-  position: relative;
-}
-
 /*
 * Set a background for media until it loads image
 */
 .card-media {
-  background: #ccc;
+  background-color: #ccc;
 }
 
 /*
-* background color for card container
+* Background color for card container
 */
 .ap-bg-grey {
-  background-color: #eee;
+  background-color: #EEEEEE;
 }

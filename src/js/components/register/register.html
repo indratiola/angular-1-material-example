@@ -48,8 +48,11 @@
         </md-radio-group>
       </md-input-container>
 
+      <div layout="row" layout-align="center center">
+        <md-button flex type="submit" class="md-raised md-primary" ng-disabled="signupForm.$invalid">Register</md-button>
+      </div>
+
       <div layout="column" layout-align="center center">
-        <md-button type="submit" class="md-raised md-primary" ng-disabled="signupForm.$invalid">Register</md-button>
         <md-button class="md-accent" ui-sref="login">Already have an account ?</md-button>
       </div>
 

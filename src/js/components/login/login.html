@@ -23,10 +23,15 @@
         </div>
       </md-input-container>
 
-      <div layout="column" layout-align="center center">
-        <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
-        <md-button type="button" ui-sref="forget-password">Forget Password ?</md-button>
-        <md-button type="button" class="md-accent" ui-sref="register">Create new account</md-button>
+      <div layout="row" layout-align="center center">
+        <md-button flex type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login
+        </md-button>
+      </div>
+
+      <div layout="row">
+        <md-button type="button" ui-sref="forget-password">Forget password ?</md-button>
+        <span flex></span>
+        <md-button type="button" class="md-accent" ui-sref="register">New User ?</md-button>
       </div>
 
     </form>
