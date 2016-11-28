@@ -1,11 +1,11 @@
 <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
 
-<md-content class="ap-bg-grey" flex layout-padding>
-  <md-card layout-padding>
+<md-content class="ap-bg-grey" layout="column" layout-padding layout-align="center center">
+  <md-card layout-padding flex-gt-xs="60">
 
     <div layout="column" flex layout-align="center center">
       <img src="img/logo.svg" height="100" alt="logo">
-      <p class="md-subhead">Welcome to Angular Material App</p>
+      <p class="md-subhead">Signin to Angular Material App</p>
     </div>
 
     <form name="loginForm" method="post" novalidate ng-submit="$ctrl.doLogin($ctrl.user)">
@@ -15,7 +15,8 @@
         <md-icon>email</md-icon>
         <input type="email" ng-model="$ctrl.user.email" name="email" required>
         <div ng-messages="loginForm.email.$error" role="alert">
-          <div ng-message-exp="['required','email']">Enter a valid email.</div>
+          <div ng-message="required">This is required.</div>
+          <div ng-message="email">Enter a valid email.</div>
         </div>
       </md-input-container>
 

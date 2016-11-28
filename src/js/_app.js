@@ -5,10 +5,11 @@
    * Declare your module dependencies here
    */
   var app = angular
-    .module('myApp', [
-      'ui.router',
-      'ngMaterial'
-    ]);
+      .module('myApp', [
+        'ui.router',
+        'ngMaterial',
+        'ngMessages'
+      ]);
 
   app.constant('WEB_SERVICE', {
     url: 'http://localhost:9000/api/v1/'

@@ -6,7 +6,7 @@
 
     this.$onInit = function () {
       vm.user = {};
-      vm.password = {};
+      vm.password = {old: '', new: '', retype: ''};
     };
 
     this.updateProfile = function (user) {

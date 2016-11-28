@@ -27,7 +27,6 @@ npm start
 ### TODO
 * Fix layout on large screens
 * Product page: two layouts
-* Product page: filter dialog
 * Single product page 
 
 

@@ -1,7 +1,9 @@
 (function () {
 
   /**
-   * Usage <md-button ap-go-back>Previous Page</md-button>
+   * Take user to previous state
+   * Usage:
+   * <md-button ap-go-back>Previous Page</md-button>
    */
   function goBackDirective($window) {
 

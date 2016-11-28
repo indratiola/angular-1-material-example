@@ -40,6 +40,7 @@
       <label>Email address</label>
       <input type="email" ng-model="$ctrl.user.email" name="email" required>
       <div ng-messages="profileForm.email.$error" role="alert">
+        <div ng-message="required">This is required.</div>
         <div ng-message="email">Enter a valid email.</div>
       </div>
     </md-input-container>
@@ -82,9 +83,11 @@
 
     <md-input-container class="md-block">
       <label>Retype new password</label>
-      <input type="password" ng-model="$ctrl.password.retype" name="retype" required>
+      <input type="password" ng-model="$ctrl.password.retype" name="retype" required
+             ap-matcher="{{$ctrl.password.new}}">
       <div ng-messages="passForm.retype.$error" role="alert">
         <div ng-message="required">This is required.</div>
+        <div ng-message="matcher">Password should be same as above.</div>
       </div>
     </md-input-container>
 
