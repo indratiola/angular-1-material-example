@@ -1,5 +1,19 @@
 /* Custom class names are prefixed with 'ap' */
 
+html {
+  /* Disable 300 ms delay */
+  touch-action: manipulation;
+  /* Detter font rendering*/
+  text-rendering: optimizeLegibility;
+}
+
+/* Disable selection/copy */
+*:not(input):not(textarea) {
+  user-select: none;
+  -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+  -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+
 /**
 *  Workaround : input field in toolbar
 */

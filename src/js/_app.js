@@ -8,7 +8,9 @@
       .module('myApp', [
         'ui.router',
         'ngMaterial',
-        'ngMessages'
+        'ngAnimate',
+        'ngMessages',
+        'underscore'
       ]);
 
   app.constant('WEB_SERVICE', {
