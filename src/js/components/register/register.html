@@ -10,19 +10,10 @@
 
     <form name="signupForm" method="post" novalidate ng-submit="$ctrl.doRegister($ctrl.user)">
       <md-input-container class="md-block">
-        <label>First name</label>
+        <label>Your name</label>
         <md-icon>person</md-icon>
-        <input type="text" ng-model="$ctrl.user.fname" name="fname" required>
-        <div ng-messages="signupForm.fname.$error" role="alert">
-          <div ng-message="required">This is required.</div>
-        </div>
-      </md-input-container>
-
-      <md-input-container class="md-block">
-        <label>Last name</label>
-        <md-icon>person</md-icon>
-        <input type="text" ng-model="$ctrl.user.lname" name="lname" required>
-        <div ng-messages="signupForm.lname.$error" role="alert">
+        <input type="text" ng-model="$ctrl.user.name" name="name" required>
+        <div ng-messages="signupForm.name.$error" role="alert">
           <div ng-message="required">This is required.</div>
         </div>
       </md-input-container>

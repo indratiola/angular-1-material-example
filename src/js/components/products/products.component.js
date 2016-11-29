@@ -19,9 +19,10 @@
         template: '<products-filter></products-filter>',
         targetEvent: $event,
         clickOutsideToClose: true,
-        escapeToClose: false,
+        escapeToClose: true,
         disableParentScroll: true,
-        autoWrap: true
+        autoWrap: true,
+        focusOnOpen: false
       }).then(function (form) {
 
       });
