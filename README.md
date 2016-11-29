@@ -27,7 +27,6 @@ npm start
 ### TODO
 * Fix layout on large screens
 * Product page: two layouts
-* Single product page 
 
 
 #### License

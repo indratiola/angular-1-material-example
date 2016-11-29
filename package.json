@@ -3,6 +3,7 @@
   "description": "angular-material-app",
   "version": "1.0.0",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -22,8 +23,7 @@
     "underscore": "~1.8.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.13.0"
   },
   "optionalDependencies": {}
 }

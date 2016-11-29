@@ -16,7 +16,7 @@
 
       }
     },
-    files: './src',
+    files: './src', // files to watch
     notify: false,
     online: false,
     reloadOnRestart: true,
