@@ -1,12 +1,21 @@
 (function () {
   'use strict';
 
-  function productDetailController($stateParams) {
+  function productDetailController($stateParams, $log, $mdToast) {
     var vm = this;
 
     this.$onInit = function () {
-      console.log($stateParams);
+      $log.debug($stateParams);
       vm.product = {id: $stateParams.id};
+    };
+
+    this.addToCart = function () {
+      $mdToast.show(
+          $mdToast.simple()
+              .textContent('Cart was updated')
+              .position('top right')
+              .hideDelay(3000)
+      );
     };
 
   }

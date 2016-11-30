@@ -1,4 +1,4 @@
-<md-toolbar layout="row" ng-hide="$ctrl.showSearchBar">
+<md-toolbar layout="column" class="md-primary">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()">
       <md-icon>menu</md-icon>
@@ -51,15 +51,15 @@
           </p>
         </div>
         <md-button class="md-icon-button md-secondary" ng-click="$ctrl.confirmDelete($event)" aria-label="Delete">
-          <md-icon>delete</md-icon>
+          <md-icon class="md-warn">delete</md-icon>
         </md-button>
       </md-list-item>
       <md-divider ng-hide="$last"></md-divider>
     </div>
   </md-list>
 
-  <div layout="row" layout-align="center center">
-    <md-button flex type="submit" class="md-raised md-primary" ui-sref="payment">Checkout</md-button>
+  <div layout="row" layout-lg="column" layout-align="center center">
+    <md-button flex flex-lg="0" type="submit" class="md-raised md-primary" ui-sref="payment">Checkout</md-button>
   </div>
 
 </md-content>

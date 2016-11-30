@@ -5,7 +5,7 @@
     var vm = this;
 
     this.$onInit = function () {
-      vm.showSearchBar = false;
+      vm.items = [];
     };
 
     this.openSideNav = function () {

@@ -7,6 +7,9 @@
       Product Details
     </h2>
     <span flex></span>
+    <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
+      <md-icon>shopping_cart</md-icon>
+    </md-button>
     <md-button class="md-icon-button" aria-label="More">
       <md-icon>more_vert</md-icon>
     </md-button>
@@ -19,9 +22,9 @@
   <img class="card-media" height="200" width="98%" alt="product_image">
 
   <section layout="row" layout-align="center center" layout-wrap>
-    <md-button class="md-raised">Add to cart</md-button>
+    <md-button class="md-raised" ng-click="$ctrl.addToCart()">Add to cart</md-button>
     <span flex></span>
-    <md-button class="md-raised md-primary">$600 Buy now</md-button>
+    <md-button class="md-raised md-primary" ui-sref="payment">$600 Buy now</md-button>
   </section>
 
   <section layout="column">

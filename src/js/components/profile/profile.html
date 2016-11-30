@@ -46,22 +46,22 @@
 
     <md-input-container class="md-block">
       <label>Phone number</label>
-      <input type="text" ng-model="$ctrl.user.phone" name="phone" required>
+      <input type="number" ng-model="$ctrl.user.phone" name="phone">
       <div ng-messages="profileForm.phone.$error" role="alert">
         <div ng-message="required">This is required.</div>
       </div>
     </md-input-container>
 
 
-    <div layout="row" layout-align="center center">
-      <md-button flex type="submit" class="md-raised md-primary">Update Profile</md-button>
+    <div layout="row" layout-lg="column" layout-align="center center">
+      <md-button flex flex-lg="0" type="submit" class="md-raised md-primary">Update Profile</md-button>
     </div>
 
   </form>
 
   <md-divider></md-divider>
 
-  <h3 class="md-subhead">Change your password</h3>
+  <h3 class="md-body-2">Change your password</h3>
 
   <form name="passForm" method="post" novalidate ng-submit="$ctrl.changePassword($ctrl.password)">
 
@@ -91,8 +91,8 @@
       </div>
     </md-input-container>
 
-    <div layout="row" layout-align="center center">
-      <md-button flex type="submit" class="md-raised md-primary">Change Password</md-button>
+    <div layout="row" layout-lg="column" layout-align="center center">
+      <md-button flex flex-lg="0" type="submit" class="md-raised md-primary">Change Password</md-button>
     </div>
 
   </form>

@@ -1,12 +1,13 @@
 (function () {
   'use strict';
 
-  function productsController($mdSidenav, $mdDialog) {
+  function productsController($mdSidenav, $mdDialog, $log) {
     var vm = this;
 
     this.$onInit = function () {
+      vm.items = [];
       vm.showSearchBar = false;
-      vm.listLayout = true;
+      vm.view = true;
     };
 
     this.openSideNav = function () {
@@ -16,7 +17,7 @@
     this.showFilter = function ($event) {
       $mdDialog.show({
         parent: angular.element(document.body),
-        template: '<products-filter></products-filter>',
+        template: '<products-filter layout="column"></products-filter>',
         targetEvent: $event,
         clickOutsideToClose: true,
         escapeToClose: true,
@@ -24,7 +25,7 @@
         autoWrap: true,
         focusOnOpen: false
       }).then(function (form) {
-
+        $log.debug(form);
       });
     };
 

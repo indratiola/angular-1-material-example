@@ -5,11 +5,11 @@
     var vm = this;
 
     this.$onInit = function () {
-      vm.user = {};
+      vm.form = {};
     };
 
-    this.doRequest = function (user) {
-      $log.debug(user);
+    this.doRequest = function (form) {
+      $log.debug(form);
     }
   }
 
