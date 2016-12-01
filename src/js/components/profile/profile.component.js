@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function profileController($log, $mdToast) {
+  function profileController($log, $mdToast, $state) {
     var vm = this;
 
     this.$onInit = function () {
@@ -17,6 +17,11 @@
               .position('top right')
               .hideDelay(3000)
       );
+    };
+
+    this.saveAndExit = function (user) {
+      this.updateProfile(user);
+      $state.go('products');
     };
 
     this.changePassword = function (form) {

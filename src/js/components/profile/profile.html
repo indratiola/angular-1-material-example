@@ -1,4 +1,4 @@
-<md-toolbar layout="column" class="md-primary">
+<md-toolbar layout="column" class="md-primary md-whiteframe-1dp">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Back" ap-go-back>
       <md-icon>arrow_back</md-icon>
@@ -7,7 +7,8 @@
       Profile
     </h2>
     <span flex></span>
-    <md-button class="md-icon-button" aria-label="More">
+    <md-button class="md-icon-button" aria-label="Save" ng-disabled="profileForm.$invalid"
+               ng-click="$ctrl.saveAndExit($ctrl.user)">
       <md-icon>done</md-icon>
     </md-button>
   </div>
@@ -61,7 +62,7 @@
 
   <md-divider></md-divider>
 
-  <h3 class="md-body-2">Change your password</h3>
+  <h3 class="md-body-2" md-colors="{color:'accent'}">Change your password</h3>
 
   <form name="passForm" method="post" novalidate ng-submit="$ctrl.changePassword($ctrl.password)">
 

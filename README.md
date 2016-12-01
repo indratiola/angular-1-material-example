@@ -28,6 +28,7 @@ npm start
 * Fix layout on large screens
 * Product page: two layouts
 * Activate current menu-item in sideNav
+* Sticky progress bar below toolbar
 
 
 #### License

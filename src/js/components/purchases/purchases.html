@@ -1,4 +1,4 @@
-<md-toolbar layout="column">
+<md-toolbar layout="column" class="md-primary md-whiteframe-1dp">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Sidebar" ng-click="$ctrl.openSideNav()">
       <md-icon>menu</md-icon>
@@ -37,16 +37,12 @@
 
 <md-content flex layout="column">
 
-  <div layout="row" flex>
-    <md-progress-linear md-mode="indeterminate" class="md-primary md-hue-1"></md-progress-linear>
-  </div>
-
   <md-list>
     <div ng-repeat="n in [1,2,3,4,5,6,7,8,9,10]">
       <md-list-item class="md-3-line">
         <div class="md-list-item-text">
           <h3>Product {{n}} name</h3>
-          <h4>SKU: 457894445</h4>
+          <h4>SKU: {{123 * n}}</h4>
           <p>
             Here is the brief description of this item
           </p>
