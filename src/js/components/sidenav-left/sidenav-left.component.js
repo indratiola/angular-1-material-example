@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  function sidenavController($mdSidenav) {
+  function sidenavController($mdSidenav, $mdDialog) {
     var vm = this;
 
     this.$onInit = function () {
@@ -11,6 +11,17 @@
     this.closeSideNav = function () {
       $mdSidenav('sidenav-left').close();
     };
+
+    this.developer = function ($event) {
+      $mdDialog.show(
+          $mdDialog.alert()
+              .clickOutsideToClose(true)
+              .title('About this app')
+              .textContent('Developed by: https://github/ankurk91')
+              .ariaLabel('Developer')
+              .ok('Close'));
+      this.closeSideNav();
+    }
   }
 
 

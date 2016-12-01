@@ -12,7 +12,7 @@
   </md-toolbar>
 
   <md-list flex>
-    <md-list-item md-ink-ripple ui-sref="products"  ui-sref-active="active" md-colors="{color:'accent'}">
+    <md-list-item md-ink-ripple ui-sref="products" ui-sref-active="active" md-colors="{color:'accent'}">
       <div class="inset">
         <md-icon>dashboard</md-icon>
       </div>
@@ -62,6 +62,16 @@
         <md-icon>person_add</md-icon>
       </div>
       <div class="inset">Register</div>
+    </md-list-item>
+
+    <md-divider></md-divider>
+    <md-subheader class="md-no-sticky">Other</md-subheader>
+
+    <md-list-item md-ink-ripple ng-click="$ctrl.developer($event)">
+      <div class="inset">
+        <md-icon>code</md-icon>
+      </div>
+      <div class="inset">Developer</div>
     </md-list-item>
   </md-list>
 
