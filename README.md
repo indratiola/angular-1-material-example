@@ -29,6 +29,7 @@ npm start
 * Product page: two layouts
 * Activate current menu-item in sideNav
 * Sticky progress bar below toolbar
+* Search input colors 
 
 
 #### License

@@ -11,24 +11,34 @@
     <md-button class="md-icon-button" aria-label="Search" ng-click="$ctrl.showSearchBar=true">
       <md-icon>search</md-icon>
     </md-button>
+    <md-button class="md-icon-button" aria-label="Notification">
+      <md-icon>notifications</md-icon>
+    </md-button>
     <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
       <md-icon>shopping_cart</md-icon>
     </md-button>
   </div>
   <!-- search bar -->
   <div class="md-toolbar-tools" ng-show="$ctrl.showSearchBar">
-    <md-button class="md-icon-button">
-      <md-icon>search</md-icon>
+    <md-button class="md-icon-button" aria-label="close" ng-click="$ctrl.showSearchBar=false">
+      <md-icon>arrow_back</md-icon>
     </md-button>
     <md-input-container md-no-float flex>
       <input ng-model="search" class="ap-toolbar-search" placeholder="Search ...">
     </md-input-container>
-    <md-button class="md-icon-button" aria-label="close" ng-click="$ctrl.showSearchBar=false">
-      <md-icon>close</md-icon>
+    <md-button class="md-icon-button">
+      <md-icon>search</md-icon>
     </md-button>
   </div>
   <!-- secondary toolbar -->
   <section layout="row" flex layout-align="end center">
+    <md-button class="md-icon-button" aria-label="Filter">
+      <md-icon>local_offer</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="Filter">
+      <md-icon>verified_user</md-icon>
+    </md-button>
+    <span flex></span>
     <md-button class="md-icon-button" aria-label="Layout" ng-click="$ctrl.view=!$ctrl.view">
       <md-icon ng-show="$ctrl.view">view_list</md-icon>
       <md-icon ng-show="!$ctrl.view">view_module</md-icon>
@@ -80,7 +90,7 @@
         </md-button>
         <md-button class="md-icon-button">
           <md-icon ng-show="!$first">add_shopping_cart</md-icon>
-          <md-icon ng-show="$first" md-colors="{color:'accent'}">remove_shopping_cart</md-icon>
+          <md-icon ng-show="$first">remove_shopping_cart</md-icon>
         </md-button>
       </div>
     </md-card-actions>
