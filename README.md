@@ -30,6 +30,7 @@ npm start
 * Activate current menu-item in sideNav
 * Sticky progress bar below toolbar
 * Search input colors 
+* Vertically and Horizontally center login screen, [see](http://stackoverflow.com/questions/39107698/how-center-a-angular-material-card-md-card-vertically-and-horizontally)
 
 
 #### License
