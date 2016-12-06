@@ -8,7 +8,7 @@
     </h2>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="Cart" ui-sref="cart">
-      <md-icon>shopping_cart</md-icon>
+      <md-icon>favorite_border</md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="More">
       <md-icon>more_vert</md-icon>
@@ -17,9 +17,9 @@
 </md-toolbar>
 
 <md-content flex layout-padding class="ap-bg-grey" layout-align="center center">
-  <h3 class="md-headline">Product {{$ctrl.product.id}} name</h3>
+  <img src="http://placehold.it/200x150?text=product" height="200" width="98%" alt="product-image">
 
-  <img class="card-media" height="200" width="98%" alt="product_image">
+  <h3 class="md-headline">Product {{$ctrl.product.id}} name</h3>
 
   <section layout="row" layout-align="center center" layout-wrap>
     <md-button class="md-raised" ng-click="$ctrl.addToCart()">Add to cart</md-button>

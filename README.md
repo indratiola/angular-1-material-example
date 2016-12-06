@@ -1,6 +1,7 @@
 # Angular Material Demo App
 
-> This SPA is intended to use in mobile platform like [cordova](http://ngcordova.com/) platform but you can try it in your browser as well
+> This SPA is intended to use in mobile platform like [cordova](http://ngcordova.com/) platform but you can try it in your browser as well.
+> Open up chrome developer tools and switch to mobile portrait view
 
 ### Prerequisites
 * node js ^6.9.1
@@ -25,8 +26,8 @@ npm start
 * [BrowserSync](http://www.browsersync.io)
 
 ### TODO
-* Fix layout on large screens
-* Product page: two layouts
+* Fix layout on large and landscape screens
+* Product page: Add virtual repeat
 * Activate current menu-item in sideNav
 * Sticky progress bar below toolbar
 * Search input colors 

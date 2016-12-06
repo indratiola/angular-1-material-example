@@ -51,7 +51,7 @@
 
 <sidenav-left></sidenav-left>
 
-<md-content class="ap-bg-grey" flex>
+<md-content class="ap-bg-grey">
   <md-subheader class="md-accent">
     <span ng-show="!$ctrl.showSearchBar">Latest products</span>
     <span ng-show="$ctrl.showSearchBar">Search results</span>
@@ -64,37 +64,69 @@
     </div>
   </div>
 
-  <!--
-  todo implement md-virtual-repeat
-  @link https://github.com/angular/material/issues/4314
-  -->
-  <md-card ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12]">
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">Product {{n}} name</span>
-        <span class="md-subhead">24in X 36in</span>
-        <span class="md-subhead">$350</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-sm card-media"></div>
-      </md-card-title-media>
-    </md-card-title>
-    <md-divider></md-divider>
-    <md-card-actions layout="row" flex>
-      <md-button ui-sref="product({id:n})">Product details</md-button>
-      <span flex></span>
-      <div layout-align="end center">
-        <md-button class="md-icon-button">
-          <md-icon ng-show="!$first">favorite_border</md-icon>
-          <md-icon ng-show="$first" md-colors="{color:'accent'}">favorite</md-icon>
-        </md-button>
-        <md-button class="md-icon-button">
-          <md-icon ng-show="!$first">add_shopping_cart</md-icon>
-          <md-icon ng-show="$first">remove_shopping_cart</md-icon>
-        </md-button>
-      </div>
-    </md-card-actions>
-  </md-card>
+  <div layout="row" layout-gt-xs="column" layout-wrap>
+    <div flex-xs flex-gt-xs="50" layout="column" layout-gt-xs="row">
+      <!-- card view -->
+      <md-card ng-show="$ctrl.view" ng-repeat="n in [1,2,3,4,5]">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Product {{n}} name</span>
+            <span class="md-subhead">24in X 36in</span>
+            <span class="md-subhead">$350</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <img src="http://placehold.it/90x90?text=thumb" class="md-card-image" alt="image">
+            <!--<div class="md-media-sm card-media"></div>-->
+          </md-card-title-media>
+        </md-card-title>
+        <md-divider></md-divider>
+        <md-card-actions layout="row" flex>
+          <md-button ui-sref="product({id:n})">Product details</md-button>
+          <span flex></span>
+          <div layout-align="end center">
+            <md-button class="md-icon-button">
+              <md-icon ng-show="!$first">favorite_border</md-icon>
+              <md-icon ng-show="$first" md-colors="{color:'accent'}">favorite</md-icon>
+            </md-button>
+            <md-button class="md-icon-button">
+              <md-icon ng-show="!$first">add_shopping_cart</md-icon>
+              <md-icon ng-show="$first">remove_shopping_cart</md-icon>
+            </md-button>
+          </div>
+        </md-card-actions>
+      </md-card>
+      <!-- list view -->
+      <md-card ng-show="!$ctrl.view" ng-repeat="n in [1,2,3,4,5]">
+        <img src="http://placehold.it/250x150?text=product" class="md-card-image" alt="image">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Product {{n}} name</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+          </p>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions layout="row" flex>
+          <md-button ui-sref="product({id:n})">View</md-button>
+          <span flex></span>
+          <div layout-align="end center">
+            <md-button class="md-icon-button">
+              <md-icon ng-show="!$first">favorite_border</md-icon>
+              <md-icon ng-show="$first" md-colors="{color:'accent'}">favorite</md-icon>
+            </md-button>
+            <md-button class="md-icon-button">
+              <md-icon ng-show="!$first">add_shopping_cart</md-icon>
+              <md-icon ng-show="$first">remove_shopping_cart</md-icon>
+            </md-button>
+          </div>
+        </md-card-actions>
+      </md-card>
+
+    </div>
+  </div>
 
 </md-content>
 
