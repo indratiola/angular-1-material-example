@@ -3,6 +3,13 @@
 > This SPA is intended to use in mobile platform like [cordova](http://ngcordova.com/) platform but you can try it in your browser as well.
 > Open up chrome developer tools and switch to mobile portrait view
 
+### Screenshots
+<img src="https://github.com/ankurk91/angular-1-material-example/raw/assets/screens/login.png" alt="screenshot" width="150">
+<img src="https://github.com/ankurk91/angular-1-material-example/raw/assets/screens/products.png" alt="screenshot" width="150">
+<img src="https://github.com/ankurk91/angular-1-material-example/raw/assets/screens/sidebar.png" alt="screenshot" width="150">
+<img src="https://github.com/ankurk91/angular-1-material-example/raw/assets/screens/profile.png" alt="screenshot" width="150">
+<img src="https://github.com/ankurk91/angular-1-material-example/raw/assets/screens/cart.png" alt="screenshot" width="150">
+
 ### Prerequisites
 * node js ^6.9.1
 * npm ^3.10.8
